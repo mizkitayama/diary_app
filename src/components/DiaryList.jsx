@@ -7,8 +7,9 @@ function DiaryList ({ diaries, onDelete, onUpdate, editingDiary, setEditingDiary
       {diaries.map((diary) => (
         <li
           key={diary.id}
-          className="bg-white p-4 rounded-lg shadow flex justify-between items-start">
-					{editingDiary?id === diary.id ? (
+          className="bg-white p-4 rounded-lg shadow flex justify-between items-start"
+				>
+					{editingDiary?.id === diary.id ? (
 						// 編集中の時だけフォーム表示
 						<form
 							onSubmit={(e) => {
@@ -43,13 +44,13 @@ function DiaryList ({ diaries, onDelete, onUpdate, editingDiary, setEditingDiary
 							<div className="flex space-x-2 ml-4">
 								<button
 									onClick={() => setEditingDiary(diary)}
-									className="text-sm text-blue-500 hover:text-blue-700"
+									className="text-sm text-blue-500 bg-gray-200 hover:text-blue-700"
 								>
 									編集
 								</button>
 								<button
 									onClick={() => onDelete(diary.id)}
-									className="text-sm text-red-500 hover:text-red-700"
+									className="text-sm text-red-500 bg-gray-200 hover:text-red-700"
 								>
 									削除
 								</button>

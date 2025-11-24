@@ -14,5 +14,9 @@ export default defineConfig({
   ],
   server: {
     open: '/index.html',
+    hmr: true,
+    watch: {
+      usePolling: true,
+    },
   },
 })
